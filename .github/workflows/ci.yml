@@ -1,0 +1,12 @@
+name: CoderCo Workflow
+
+on: [push]
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout code 
+      uses: actions/checkout@v2
+    - name: We are testing out this workflow
+      run: echo Hello everyone!
