@@ -1,4 +1,4 @@
-name: CoderCo Workflow
+name: CoderCo Combined
 
 on: [push]
 
