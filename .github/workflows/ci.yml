@@ -5,19 +5,15 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: siada2/project:v1
-      credentials:
-        username: ${{ env.USER_NAME }}
-        password: ${{ secrets.MY_SECRET }}
-        
+
     steps:
       - name: checkout code
         uses: actions/checkout@v2
     
       - name: run image
         run: |
-          docker run siada2/project:v1
+          docker pull siada2/project:v1
+          docker run -p 4000:4000
     
     
       
