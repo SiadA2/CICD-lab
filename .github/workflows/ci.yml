@@ -18,9 +18,12 @@ jobs:
         password: ${{ secrets.MY_SECRET }}
     
     steps:
-      - name: run container
+      - name: run image
         run: |
-          docker run -p 4000:4000 siada2/project:v1
+          docker run siada2/project:v1
+    
+    
+      
     
 
 
