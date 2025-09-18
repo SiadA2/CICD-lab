@@ -3,19 +3,15 @@ name: CoderCo Assignment 1
 on: [push]
 
 jobs:
-  build: 
+  container-test-job:
     runs-on: ubuntu-latest
+    container:
+      image: siada2/project:v1
+      credentials:
+        username: ${{ user.name }}
+        password: ${{ secrets.MY_SECRET }}
+    
 
-    steps:
-    - name: checkout code 
-      uses: actions/checkout@v2
-
-    - name: pull docker image
-      run: |
-        docker pull siada2/projects:v1
-        docker run -p 4000:4000 siada2/projects:v1
-      
-      if: success()
 
      
     
