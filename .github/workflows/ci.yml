@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
-        
+
   container-test-job:
     runs-on: ubuntu-latest
     container:
@@ -16,6 +16,11 @@ jobs:
       credentials:
         username: ${{ env.USER_NAME }}
         password: ${{ secrets.MY_SECRET }}
+    
+    steps:
+      - name: run container
+        run: |
+          docker run -p 4000:4000 siada2/project:v1
     
 
 
