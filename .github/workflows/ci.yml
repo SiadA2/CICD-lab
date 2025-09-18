@@ -13,7 +13,7 @@ jobs:
       - name: run image
         run: |
           docker pull siada2/project:v1
-          docker run -p 4000:4000
+          docker run -p 4000:4000 siada2/project:v1
     
     
       
