@@ -8,7 +8,7 @@ jobs:
     container:
       image: siada2/project:v1
       credentials:
-        username: ${{ variables.USER_NAME }}
+        username: ${{ env.USER_NAME }}
         password: ${{ secrets.MY_SECRET }}
     
 
