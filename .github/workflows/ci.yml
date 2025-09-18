@@ -13,6 +13,7 @@ jobs:
     - name: pull docker image
       run: |
         docker pull siada2/test:v1
+        docker run -p 4000:4000 siada2/test:v1
       
       if: success()
 
