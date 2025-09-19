@@ -10,10 +10,10 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v2
     
-      - name: run image
+      - name: build and push image
         run: |
           cd ..
-          docker build -t siada2/project:v1
+          docker build -t siada2/project:v1 .
           docker push siada2/project:v1
       
       - name: testing workflow
