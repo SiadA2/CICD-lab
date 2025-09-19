@@ -14,7 +14,10 @@ jobs:
         run: |
           docker pull siada2/project:v1
           docker run -p 4000:4000 siada2/project:v1
-    
+      
+      - name: testing workflow
+        run: echo "succesfull"
+        if: success()
     
       
     
