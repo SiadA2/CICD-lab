@@ -12,7 +12,6 @@ jobs:
     
       - name: build and push image
         run: |
-          cd ..
           docker build -t siada2/project:v1 .
           docker push siada2/project:v1
       
