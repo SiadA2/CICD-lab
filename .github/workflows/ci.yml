@@ -19,8 +19,8 @@ jobs:
     
       - name: build and push image
         run: |
-          docker build -t siada2/project:v1 .
-          docker push siada2/project:v1
+          docker build -t siada2/project:v2 .
+          docker push siada2/project:v2
       
       - name: testing workflow
         run: echo "succesfull"
